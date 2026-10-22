@@ -7,7 +7,7 @@ I've made it public as I thought it might be interesting for people to see how i
 
 ```bash
 sudo apt install -y \
-    texlive
+    texlive \
     texlive-latex-base \
     texlive-latex-extra \
     texlive-latex-recommended \ 
