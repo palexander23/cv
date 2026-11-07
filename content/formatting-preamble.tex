@@ -77,22 +77,16 @@
     \end{minipage}}\fi%
   \par\addvspace{#1}}
 
-\newcommand*{\customcvproject}[4][.25em]{
+\newcommand*{\customcvproject}[3][.25em]{
   \vspace{2mm}
   \begin{tabular}{@{}l} 
     {\bfseries #2}
   \end{tabular}
-  \hfill% move it to the right
-  \begin{tabular}{l@{}}
-    {\itshape #3}
-  \end{tabular}
-  \ifx&#4&%
-  \else{\\%
-    \begin{minipage}{\maincolumnwidth}%
-      \small#4%
-    \end{minipage}}\fi%
-  \par\addvspace{#1}
-  }
+  \par
+  \begin{minipage}{\maincolumnwidth}%
+    \small#3%
+  \end{minipage}%
+  \par\addvspace{#1}}
 
 \setlength{\tabcolsep}{12pt}
 
