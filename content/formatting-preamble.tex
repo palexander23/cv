@@ -80,6 +80,16 @@
     \end{minipage}}\fi%
   \par\addvspace{#1}}
 
+% Education entry on one line: date, qualification, institution.
+% Keeps the current customcventry styling: institution bold, other fields italic.
+\newcommand*{\customcveducation}[3]{%
+  \noindent
+  {
+  \begin{tabularx}{\linewidth}{@{}lXr@{}}%
+    \large \textbf{#3} & \textit{#2} & \textit{#1}
+  \end{tabularx}%
+  \par\addvspace{.25em}}}
+
 \newcommand*{\customcvproject}[3][.25em]{
   \Needspace{4\baselineskip}% Keep the title and the start of its content together.
   \vspace{2mm}
