@@ -6,7 +6,7 @@ CONTENT = $(wildcard content/*.tex content/projects/*.tex)
 all: $(PDF)
 
 %.pdf: %.tex $(CONTENT)
-	@echo "" | lualatex $*
+	@echo "" | lualatex $* && lualatex $*
 
 clean:
 	-rm -r *.aux *.bcf *.log *.out *.toc *.xml *.bbl *.blg

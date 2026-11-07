@@ -4,14 +4,33 @@
 
 \begin{document}
 
-%------- Content --------%
+%///////////////////////////////////////////////////////////////////////////////////
+%//////////////////////////////////// CONTENT //////////////////////////////////////
+%///////////////////////////////////////////////////////////////////////////////////
+
+% Header ------------------------%
 \input{content/header.tex}
 \input{content/personal-statement}
 \input{content/skills}
-\input{content/experience}
+% End Header --------------------%
+
+% Jobs & Projects ------------------------------------------------------------------
+\section{EXPERIENCE}
+
+\customcvjobline{Oct 2021 - Present}{Consultant - Embedded Systems}{\href{https://42t.com/}{42T}}{Cambourne - Cambridgeshire}{}
+\input{content/projects/42t-oyster-hw-sw-codesign}
+\input{content/projects/42t-smiths-an-design-current-source}
+\input{content/projects/42t-cicd-embedded-linux-admin}
+\input{content/projects/42t-pigeon-sw-dev}
+% End Jobs & Projects --------------------------------------------------------------
+
+% Footer -----------------------%
 \input{content/education}
-\input{content/base-projects}
-%----- End Content-------%
+% End Footer -------------------%
+
+%///////////////////////////////////////////////////////////////////////////////////
+%//////////////////////////////////// CONTENT //////////////////////////////////////
+%///////////////////////////////////////////////////////////////////////////////////
 
 % Publications from a BibTeX file without multibib
 %  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART

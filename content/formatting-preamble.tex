@@ -88,6 +88,23 @@
   \end{minipage}%
   \par\addvspace{#1}}
 
+% Job heading split over two columns:
+%   1. date (fixed-width left column)
+%   2. job title (bold)
+%   3. employer
+%   4. location
+% Example: \customcvjobline{2023 -- Present}{Embedded Software Engineer}
+%          {42Technology Consultancy}{Saint Ives}
+\newcommand*{\customcvjobline}[4]{%
+  \noindent % Do not indent the heading as a paragraph.
+  {\large % Set the font size before the table so both cells inherit it.
+  \begin{tabularx}{\linewidth}{@{}p{3.2 cm}X@{}}%
+    % p{x.ycm} reserves space for the date; X uses the remaining line width.
+    % Change x.ycm if your dates need more/less room.
+    #1 & \textbf{#2} \textbar{} #3 \textbar{} #4
+  \end{tabularx}}%
+  \par\addvspace{.25em}} % End the line and add a small gap afterwards.
+
 \setlength{\tabcolsep}{12pt}
 
 % Stop page breaks in the middle of paragraphs
