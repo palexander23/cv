@@ -1,6 +1,6 @@
 TEX = $(wildcard *.tex)
 PDF = $(TEX:.tex=.pdf)
-CONTENT = $(wildcard content/*.tex)
+CONTENT = $(wildcard content/*.tex content/projects/*.tex)
 
 .PHONY: all
 all: $(PDF)
