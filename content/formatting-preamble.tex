@@ -19,6 +19,7 @@
 \usepackage{fontawesome5}
 \usepackage{fontspec}
 \usepackage{tabularx}
+\usepackage{needspace}
 \usepackage{ragged2e}
 \usepackage{helvet}
 % if you are not using xelatex ou lualatex, replace by the encoding you are using
@@ -41,7 +42,7 @@
 %\phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
 % \email{xpan1@swarthmore.edu}                      % optional, remove / comment the line if not wanted
 % \homepage{shawnpan.me}                            % optional, remove / comment the line if not wanted
-\extrainfo{Electronics Engineer}                     % optional, remove / comment the line if not wanted
+\extrainfo{Consultant - Embedded Systems}                     % optional, remove / comment the line if not wanted
 %\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
 %\quote{Some quote}                                 % optional, remove / comment the line if not wanted
 
@@ -78,14 +79,13 @@
   \par\addvspace{#1}}
 
 \newcommand*{\customcvproject}[3][.25em]{
+  \Needspace{4\baselineskip}% Keep the title and the start of its content together.
   \vspace{2mm}
   \begin{tabular}{@{}l} 
     {\bfseries #2}
   \end{tabular}
   \par
-  \begin{minipage}{\maincolumnwidth}%
-    \small#3%
-  \end{minipage}%
+  \small#3%
   \par\addvspace{#1}}
 
 % Job heading split over two columns:
