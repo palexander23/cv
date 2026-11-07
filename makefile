@@ -1,16 +1,13 @@
-IMG = $(wildcard img/**/*.*)
-DOC = $(wildcard doc/**/*.*)
+TEX = $(wildcard *.tex)
+PDF = $(TEX:.tex=.pdf)
 CONTENT = $(wildcard content/*.tex)
 
 .PHONY: all
-all: cv.pdf cv-long.pdf
+all: $(PDF)
 
-cv.pdf: cv.tex $(CONTENT) $(APPENDIX) $(IMG) $(DOC) $(CONTENT) 
-	@echo "" | lualatex cv
-	
-cv-long.pdf: cv-long.tex $(CONTENT) $(APPENDIX) $(IMG) $(DOC) $(CONTENT) 
-	@echo "" | lualatex cv-long
-	
+%.pdf: %.tex $(CONTENT)
+	@echo "" | lualatex $*
+
 clean:
 	-rm -r *.aux *.bcf *.log *.out *.toc *.xml *.bbl *.blg
 	-rm -r ./*/*.aux
