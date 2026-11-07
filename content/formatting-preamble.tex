@@ -6,7 +6,7 @@
 % available at http://www.latex-project.org/lppl/.
 
 
-\documentclass[11pt,a4paper,roman]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
 
 % modern themes
 \moderncvstyle{banking}                             % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
@@ -24,6 +24,8 @@
 \usepackage{helvet}
 % if you are not using xelatex ou lualatex, replace by the encoding you are using
 % \usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+\setsansfont{Carlito}
 
 % adjust the page margins
 \usepackage[scale=0.86]{geometry}
@@ -98,7 +100,7 @@
 \newcommand*{\customcvjobline}[4]{%
   \noindent % Do not indent the heading as a paragraph.
   {\large % Set the font size before the table so both cells inherit it.
-  \begin{tabularx}{\linewidth}{@{}p{3.2 cm}X@{}}%
+  \begin{tabularx}{\linewidth}{@{}p{4.2cm}X@{}}%
     % p{x.ycm} reserves space for the date; X uses the remaining line width.
     % Change x.ycm if your dates need more/less room.
     #1 & \textbf{#2} \textbar{} #3 \textbar{} #4
